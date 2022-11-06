@@ -1,0 +1,880 @@
+/*----------ОСНОВНУХА----------------------------------------*/
+.mainpage {
+			flex-grow: 1;
+			order: 2;}
+/*----------Загрузка перед запуском сайта----------------------------------------*/
+ .loader {
+			position: fixed;
+			z-index: 99;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;}
+
+.loader > img {
+    width: 100px;}
+
+.loader.hidden {
+				animation: fadeOut 2s;
+				animation-fill-mode: forwards;}
+
+@keyframes fadeOut {
+    100% {opacity: 0;
+		  visibility: hidden;}
+} 
+
+/*---------------------Кнопка вернуться в топ----------------------------------------*/
+#myBtn {  
+		height: 50px; 
+		width: 50px;
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 30px;
+		z-index: 99;
+		border: none;
+		outline: none;
+		background-image: url(buttont.png);
+		background-color: rgba(0,0,0,0.0);
+		background-size: 50px 50px;
+		color: black;
+		cursor: pointer;
+		border-radius: 10px;
+		font-size: 18px;}
+
+#myBtn:hover {
+			background-image: url(button.png);
+			}
+
+/*---------------------Дизайн текста-----------------------------------------------*/
+body	{
+		margin: 0;
+		}
+a, a:hover {color: #FFF; text-decoration: none;}
+
+#wrapper {	position: relative;
+			overflow: hidden;
+		}
+#header {	
+		height: 30px;
+		top: 0px;
+		min-width: 1280px;
+		width: 100%; 
+		background: rgba(0,0,0,0.45); 
+		transition: top 0.1s; 
+		position: fixed; 
+		display: block;
+		font-family: 'Play', sans-serif;}
+
+#navi 	{	
+		background: rgba(0,0,0,0.45);
+		top:30px;
+		height: 65px;
+		width: 100%;
+		transition: top 0.1s;
+		display: block;
+		position: fixed;
+		font-family: 'Play', sans-serif;
+		font-size: 20pt;
+		z-index: 98;}
+.fullshapka {	
+			width: 100%;
+			height: 25px;
+			text-align: center;
+			margin: 0px auto 0px auto;}
+
+.box1 {	
+			width: 50px;
+			display: inline-table;
+			position: relative;
+			font-size: 10pt;}
+
+.hubox {
+		color: #FFF;
+		vertical-align:	middle;
+		width: 120px; 
+		height:	25px;}
+
+.box2 {		
+		color: #FFF;
+		vertical-align:	middle;
+		display: block;
+		width: 200px;
+		height:	25px;} 
+			
+.box3 {
+		color: #FFF;
+		vertical-align:	middle;
+		display: block;
+		width: 350px;
+		height:	25px;}
+/*---------------------------------------------------------------------*/
+
+#content {
+			min-height: 400px; 
+			overflow: hidden;  
+			background-color: #F1F4F9;
+			width: 100%;
+			font-family: 'Play', sans-serif;}
+/*#footer {background: #f0f0f0;
+		 height: 25px;
+		 color: #777;
+		 padding: 10px;
+		} */
+
+#menu {	justify-content: center;
+		display: flex;
+		padding-right: 100px;}
+#menu > ul {margin: 0; padding: 0px; list-style-type: none;}
+#menu > ul:after {content: " "; display: block; line-height: 0; height: 0; width: 100%; clear: both;}
+#menu > ul > li {float: left;}
+#menu > ul > li + li {margin-left: 10px;}
+#menu > ul > li > a {
+						display: block; padding: 17px 17px; color: #FFF; 
+						-webkit-transition: all .3s;
+						-moz-transition: all .3s;
+						-ms-transition: all .3s;
+						-o-transition: all .3s;
+						transition: all .3s;}
+						
+#menu > ul > li > a:hover {
+							background: #E76600;
+							padding-bottom: 17px; 
+							padding-top: 17px;
+							z-index: 99;}
+
+.post {width: 30%; 
+		margin-right: 5%; 
+		float: left; 
+		text-align: justify; 
+		cursor: pointer;}
+		
+.post.last {
+			margin-right: 0;}
+			
+.post .post-title {
+					text-transform: uppercase;}
+
+#ex2 .post,
+#ex3 .post,
+#ex4 .post {
+			width: 50%;
+			margin-right: 10%;}
+#ex2 .post.last,
+#ex3 .post.last,
+#ex4 .post.last {
+				margin-right:0;}
+
+@media only screen and (max-width:960px){
+										#inner-wrapper { width: 100%;}
+										} 
+/*-----------------------------ПАРАЛЛКАС----------------------------------------*/
+.parallax {
+			/* картинка */
+			background-image: url("bgeqe.png");
+			
+			/* нужное разрешение для параллакса (блока) */
+			min-height: 1000px; 
+
+			/* создает эффект параллакса при скроллинге */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;}
+			
+/*-----------------------------Начальная страница (ЛОГО)----------------------------------------*/
+.loga {
+		background-image: url("LOGA.png");
+		height: 192px; 
+		width: 635px;
+		top: 430px;
+		position: relative;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		background-size: 635px 192px;}
+		
+.logo {
+		background-image: url(logo.png);
+		background-size: 80px 52px;
+		padding: 20px 40px 40px 40px;	
+		display: block;
+		background-repeat: no-repeat;
+		margin-top: 6px;
+		position: relative; 
+		right: 200px; 
+		position: relative;}
+		
+/*-----------------------------Блоки страниц----------------------------------------*/
+
+.block1 {
+		min-height: 977px;
+		background-color: #F1F4F9;
+		background-position: center;
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;}
+		
+.block2 {
+		min-height: 1600px;
+		background-color: #F1F4F9;
+		background-position: center;}
+		
+.container {
+			width: 1075px;
+			padding-right: 0px;
+			padding-left: 0px;
+			margin-right: auto;
+			margin-left: auto;
+			padding-top: 80px; 
+			padding-bottom: 120px;}
+			
+/*------------------------------------------Страница номер 2---------------------------------------------------	*/
+
+.title2 {
+		text-align: center;
+		font-size: 20pt;
+		vertical-align:	middle;
+		color: #637384;}
+		
+.style {
+		text-align: center;
+		font-size: 18pt;
+		vertical-align:	middle;
+		padding-top: 40px;
+		padding-right: 20px;
+		padding-left: 20px; 
+		line-height: 25px;
+		color: #637384;}
+
+.uslug {
+		padding-top: 25px; 
+		position: relative;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 0px;
+		float: left;
+		width: 41.66666667%;
+		height: 600px;}
+		
+.op1 {
+		display: relative;
+		vertical-align: top;
+		box-sizing: border-box;
+		min-width: 250px;}
+		
+.zagolo {
+		font-size: 17pt;
+		font-family: 'Play', sans-serif;}
+		
+.zagolol {
+		font-size: 17pt;
+		font-family: 'Play', sans-serif;
+		color: #637384;}
+		
+.shb {
+		margin: 0 0 10px;
+		display: block;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+		font-size: 15px;
+		line-height: 24px;
+		margin-left: 70px;
+		color: #637384;}
+		
+.leftimg {
+			float:left; 
+			margin: 7px 10px 60px 0; 
+			border-radius: 25%;}
+			
+.rightmg {
+			padding-top: 75px; 
+			position: relative;
+			min-height: 1px;
+			padding-right: 15px;
+			padding-left: 75px;
+			float: left;
+			width: 46.66666667%;
+			height: 500px;} 
+			
+.imglf {	
+		background: url(logob.png);
+		width: 498px;	
+		height: 323px;}
+		
+.imgl {	
+		background: url(logob.png);
+		width: 498px;	
+		height: 323px;}
+		
+.imgl .imglf:hover {
+					animation-name: fade;
+					animation-duration: 1s;
+					background-image: url(logorgb.png);}
+			
+@keyframes fade {
+  from {opacity: 0.1} 
+  to {opacity: 1}
+}
+
+/*---------------------------параллакс2----------------------------*/
+
+.parallax1 {
+			/* картинка */
+			background-image: url("bg.png");
+			/* нужное разрешение для параллакса (блока) */
+			min-height: 500px; 
+			/* создает эффект параллакса при скроллинге 
+			background-attachment: fixed;*/
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;}
+			
+.imagebox {
+			float: left;
+			width: 100%;
+			margin-right: 2%;
+			padding: 10px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			text-align: center;
+			vertical-align: middle;}
+			
+.hv1 {	
+		margin-top: 30px;
+		display: inline-table;
+		padding: 10px;
+		width: 23.5%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;}
+		
+.text1 {
+		font-size: 30pt;
+		color: white;}
+		
+.text2 {
+		font-size: 18pt;
+		color: white;}
+		
+.image1 {
+		background-image: url(speed1.png);
+		width: 150px; 
+		height: 150px; 
+		background-size: 150px 150px;
+		margin: auto;}
+		
+.hv2 {	
+		margin-top: 30px;
+		display: inline-table;
+		padding: 10px;
+		width: 23.5%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;}
+		
+.image2 {
+		margin-left: 60px;
+		background-image: url(qual1.png);
+		width: 150px; 
+		height: 150px; 
+		background-size: 150px 150px; 
+		margin: auto;}	
+		
+.hv3 {	
+		margin-top: 30px;
+		display: inline-table;
+		padding: 10px;
+		width: 23.5%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;}
+
+.image3 {	
+		margin-left: 60px;
+		background-image: url(garant2.png);
+		width: 150px; 
+		height: 150px; 
+		background-size: 150px 150px;
+		margin: auto;}
+		
+/*------------------------------------------Социалочка---------------------------------------------------	*/		
+		
+		/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+		z-index: 90;
+		position: fixed;
+		top: 90%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);}
+
+/* Style the icon bar links */
+.icon-bar a {
+			display: block;
+			text-align: center;
+			padding: 16px;
+			transition: all 0.3s ease;
+			color: white;
+			font-size: 20px;}
+
+.twitter {
+		background: #000;
+		color: white;}
+
+.twitter:hover {background: #55ACEE;}
+
+.google {
+		background: #000;
+		color: white;}
+
+.google:hover {background: #dd4b39;}
+
+.youtube {
+		background: #000;
+		color: white;}
+
+.youtube:hover {background: #bb0000;}
+	
+/*------------------------------------------Страница номер 3---------------------------------------------------	*/
+
+.title3 {
+		text-align: center;
+		font-size: 20pt; 
+		vertical-align:	middle;
+		color: #637384;}
+* {box-sizing: border-box}
+
+.boxtab {
+		width: 100%;
+		padding-top: 50px;}
+		
+/* Style the tab */
+
+.tab {
+	  float: left;
+	  width: 30%;
+	  height: 300px;}
+  
+/* Style the buttons that are used to open the tab content */
+
+.tab button {
+			display: block;
+			background-color: inherit;
+			color: #637384;
+			padding: 22px 16px;
+			width: 100%;
+			border: none;
+			outline: none;
+			text-align: left;
+			cursor: pointer;
+			transition: 0.3s;
+			font-size: 17pt;
+			font-family: 'Play', sans-serif;}
+	
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+					background-color: #D37204;
+					color: #F1F4F9;}
+   
+/* Create an active/current "tab button" class */
+
+.tab button.active {
+					  background-color: #D38404;
+					  color: #F1F4F9;}
+  
+/* Style the tab content */
+
+.tabcontent {
+			  float: left;
+			  padding: 0px 12px;
+			  width: 70%;
+			  border-left: none;
+			  height: 300px;}
+  
+.tro {
+		margin: 0 0 10px;
+		display: block;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+		font-size: 17px;
+		line-height: 24px;
+		color: #637384;}
+		
+table {
+		  border-collapse: collapse;
+		  width: 100%;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  color: #637384;}
+		  
+td, th {
+		border: 1px solid #F1F4F9;
+		text-align: left;
+		padding: 8px;}
+	
+tr:nth-child(even) {
+					background-color: #e8e8e8;}		
+  
+.tablez {
+			background: #D38404;
+			color: #F1F4F9;}
+		
+tr:hover {
+			background-color: #D37204;
+			color: #F1F4F9; }
+			
+.okomp {
+		background-image: url(komputer.png);
+		height: 284px;
+		width: 818px;
+		background-size: 818px 284px;
+		margin-bottom: 50px;}
+		
+.telef {
+		background-image: url(planshety_telefony.png);
+		height: 354px;
+		width: 918px;
+		background-size: 918px 354px;
+		margin-bottom: 50px;}
+		
+.parallax2 {
+			/* картинка */
+			background-image: url("par.png");
+			
+			/* нужное разрешение для параллакса (блока) */
+			height: 800px; 
+			/* создает эффект параллакса при скроллинге */
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;}
+			
+/*------------------------------------------Страница номер 4---------------------------------------------------	*/
+
+.title4 {
+		text-align: center;
+		font-size: 20pt; 
+		vertical-align:	middle;
+		color: #D38404;}
+
+.utitle {
+		text-align: center;
+		font-size: 20pt; 
+		vertical-align:	middle;
+		color: #637384;}
+
+.imagebox {
+			min-height: 500px;
+			float: left;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			text-align: center;
+			vertical-align: middle;}
+
+.baner {
+		margin-left: 10px;
+		display: inline-block;
+		width: 275px;
+		height: 310px;
+		background-color: white;
+		margin-top: 50px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;}
+
+.topper {
+		text-align: center;
+		vertical-align: middle;
+		font-size: 18pt; 
+		color: #F1F4F9;
+		background-color: #D38404;
+		width: auto;
+		height: 35px;}
+		
+.topper1 {
+		text-align: center;
+		vertical-align: middle;
+		font-size: 18pt; 
+		color: #F1F4F9;
+		background-color: #D38404;
+		width: auto;
+		height: 35px;}
+
+.topper2 {
+		font-size: 18pt; 
+		color: #F1F4F9;
+		background-color: #D38404;
+		width: auto;
+		height: 35px;}
+		
+.sredner {
+		text-align: center;
+		vertical-align: bottom;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		width: auto;
+		padding-top: 40px;
+		height: 70px;}
+
+.sredner2 {
+		text-align: center;
+		vertical-align: bottom;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		width: auto;
+		padding-top: 40px;
+		height: 70px;}
+		
+.sredner3 {
+		text-align: center;
+		vertical-align: bottom;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		width: auto;
+		padding-top: 40px;
+		height: 70px;}
+.joper {
+		text-align: center;
+		vertical-align: bottom;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		padding-top: 5px;
+		width: auto;
+		height: 35px;}
+		
+.joper2 {
+		text-align: center;
+		vertical-align: bottom;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		padding-top: 5px;
+		width: auto;
+		height: 35px;}
+		
+.joper3 {
+		text-align: center;
+		vertical-align: bottom;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		padding-top: 5px;
+		width: auto;
+		height: 35px;}
+
+.huper {
+		text-align: center;
+		vertical-align: middle;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		padding-top: 5px;
+		width: auto;
+		height: 100px;}
+		
+.huper2 {
+		text-align: center;
+		vertical-align: middle;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		padding-top: 5px;
+		width: auto;
+		height: 100px;}
+		
+.huper3 {
+		text-align: center;
+		vertical-align: middle;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		padding-top: 5px;
+		width: auto;
+		height: 100px;}
+		
+.cena {
+		text-align: center;
+		vertical-align: middle;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		width: auto;
+		height: 70px;}
+		
+.cena2 {
+		text-align: center;
+		vertical-align: middle;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		width: auto;
+		height: 70px;}
+		
+.cena3 {
+		text-align: center;
+		vertical-align: middle;
+		background-color: white;
+		border: 1px solid #F1F4F9;
+		font-size: 12pt; 
+		color: #637384;
+		width: auto;
+		height: 70px;}
+/*------------------------------------------Страница номер 5---------------------------------------------------	*/
+
+.title5 {
+		text-align: center;
+		font-size: 20pt; 
+		vertical-align:	middle;
+		color: #F1F4F9;}
+		
+.kont {
+		min-height: 500px;
+		width: 100%;}	
+		
+.form-row {
+			padding-top: 30px;
+			text-align: center; 
+			vertical-align:	middle;}
+
+.form-row input {
+				height: 50px;
+				line-height: 19px;
+				width: 287px;
+				border: 1px solid #ABADB3;
+				font-size: 15pt;
+				font-family: 'Play', sans-serif;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;}
+
+.form-row textarea {
+					width: 287px;
+					height: 100px;
+					font-size: 15pt;
+					line-height: 19px;
+					border: 1px solid #ABADB3;
+					font-family: 'Play', sans-serif;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					border-radius: 5px;}
+
+.form-low {
+			padding-top: 30px;
+			text-align: center; 
+			vertical-align:	middle;}
+
+.form-low input:hover {
+						background-color: #D38404;
+						color: #F1F4F9;}
+
+.form-low input {
+				height: 40px;
+				line-height: 19px;
+				width: 287px;
+				border: 1px solid black;
+				font-size: 15pt;
+				font-family: 'Play', sans-serif;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;}
+
+.style1 {
+		color: #F1F4F9;
+		text-align: center;
+		font-size: 18pt;
+		vertical-align:	middle;
+		padding-top: 40px;
+		padding-right: 20px;
+		padding-left: 20px; 
+		line-height: 25px;
+		padding-bottom: 25px;}
+
+.blocker {
+		min-height: 800px;
+		background-color: #F1F4F9;
+		background-position: center;}
+
+.containerz {height: 500px;
+			padding-right: 0px;
+			padding-left: 0px;
+			margin-right: auto;
+			margin-left: auto;
+			padding-bottom: 29px;
+			background-color: #252c34;}
+
+.containez {
+			width: 1075px;
+			height: 800px;
+			padding-right: 0px;
+			padding-left: 0px;
+			margin-right: auto;
+			margin-left: auto;
+			padding-top: 110px; 
+			padding-bottom: 120px;}
+
+.bgg {
+	background-color: #252c34;}
+
+.blockz {
+		min-height: 500px;
+		background-color: #252c34;
+		background-position: center;}
+
+.logoz {
+		background-color: #252c34;
+		background-image: url(logo1.png);
+		height: 203px;
+		width: 320px;
+		background-size: 320px 203px;
+		margin-top: 50px;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center; 
+		vertical-align:	middle;
+		background-repeat: no-repeat;}
+	
+.logoz:hover {background-image: url(logo.png);}
+
+.boxz {
+		padding-top: 20px;}
+
+.footerz {
+		padding-top: 10px;
+		font-size: 13pt;
+		color: #637384;
+		text-align: center; 
+		vertical-align:	middle;
+		font-family: 'Play', sans-serif;}
+
+.trus {
+		background-color: #252c34;}
+
+
+	
